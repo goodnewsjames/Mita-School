@@ -12,6 +12,7 @@ void main() {
   print("the value of sum is $number");
 
   print(greeting(name: "Jason", title: "Mr."));
+  print(blendedValue);
 }
 
 String greeting({
@@ -19,7 +20,7 @@ String greeting({
   required String title,
 }) => "Hello $title $name welcome to our class";
 
-var myFunction = () => null;
+var myFunction = () {};
 
 Map<String, double> quadraticFunction({
   required int a,
@@ -44,6 +45,22 @@ Map<String, double> quadraticFunction({
 // callback function
 // arrow or lambda function
 
+String washer(String plate, int amount) {
+  return "";
+}
 
+String blender({
+  required String food,
+  required String type,
+  required int quantity,
+}) {
+  String myFood = food;
+  return "Blend $food type of $type, for $quantity quantity";
+}
 
+var blendedValue = blender(
+  food: "Yam",
+  type: "cocoyam",
+  quantity: 5,
+);
 // OOP

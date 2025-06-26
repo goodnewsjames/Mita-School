@@ -20,6 +20,15 @@ class Car {
   String brand;
   int speed;
   int seats;
+
+  String drive() {
+    print("Driving.......");
+    return "Start Driving";
+  }
+
+  static void park() {
+    print("Properly packed car");
+  }
 }
 
 //static variable
@@ -35,7 +44,7 @@ class Shoe {
   String color;
   String brand;
 
-  static String productionDate = '';
+  static String productionDate = '20/12/2008';
 }
 
 // using a static variable
@@ -55,6 +64,9 @@ class FlutterClass {
 
 void main() {
   var newCar = Car('camry', 'toyota', 120, 4);
+  var carMethod = newCar.drive();
+  Car.park();
+  // ignore: unused_local_variable
   var newShoe = Shoe(
     size: 32,
     color: "brown",
@@ -68,12 +80,20 @@ void main() {
   var tire = newVehicle.myTire;
   print(tire);
   print(newCar);
+
+  var newObjectOfGreeting = Greeting(
+    age: 45,
+    gender: "male",
+    isAnswer: false,
+    name: "Matthew",
+    title: "Mr",
+  );
+
+ var age = newObjectOfGreeting.age;
 }
 
-
-
 // methods of a class
-// override default methods 
+// override default methods
 // other types of constructors
 // other types of class
 //  pillars of oop
@@ -81,3 +101,21 @@ void main() {
 //  inheritance
 //  polymorphism
 //  encapsulation
+
+//name Constructor
+
+class Greeting {
+  Greeting({
+    required this.age,
+    required this.gender,
+    required this.isAnswer,
+    required this.name,
+    required this.title,
+  });
+
+  String name;
+  String gender;
+  String title;
+  int age;
+  bool isAnswer;
+}
