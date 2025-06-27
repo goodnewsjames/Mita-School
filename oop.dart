@@ -81,15 +81,7 @@ void main() {
   print(tire);
   print(newCar);
 
-  var newObjectOfGreeting = Greeting(
-    age: 45,
-    gender: "male",
-    isAnswer: false,
-    name: "Matthew",
-    title: "Mr",
-  );
-
- var age = newObjectOfGreeting.age;
+  
 }
 
 // methods of a class
@@ -102,20 +94,3 @@ void main() {
 //  polymorphism
 //  encapsulation
 
-//name Constructor
-
-class Greeting {
-  Greeting({
-    required this.age,
-    required this.gender,
-    required this.isAnswer,
-    required this.name,
-    required this.title,
-  });
-
-  String name;
-  String gender;
-  String title;
-  int age;
-  bool isAnswer;
-}
