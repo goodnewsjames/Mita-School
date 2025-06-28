@@ -44,7 +44,7 @@ class Shoe {
   String color;
   String brand;
 
-  static String productionDate = '20/12/2008';
+  static final String productionDate = '20/12/2008';
 }
 
 // using a static variable
@@ -73,6 +73,7 @@ void main() {
     brand: "gucci",
     gender: "male",
   );
+  var shoeColor = newShoe.color;
   var newVehicle = MyVehicleaName();
   var newClass = FlutterClass("56", "23", "Jason", "OOP");
   print(newClass._lectureHall);
