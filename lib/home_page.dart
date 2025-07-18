@@ -1,3 +1,4 @@
+import 'package:bagzz/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
+      appBar: AppBar(
         titleSpacing: 1,
         leading: IconButton(
           onPressed: () {},
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           CircleAvatar(
-            backgroundColor: Colors.black.withValues( 
+            backgroundColor: Colors.black.withValues(
               alpha: 0.8,
             ),
             child: Center(
@@ -40,9 +41,10 @@ class _HomePageState extends State<HomePage> {
       ),
 
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8.0,
-          vertical: 20,
+        padding: const EdgeInsets.only(
+          left: 8,
+          right: 8,
+          top: 20,
         ),
         child: Column(
           children: [
@@ -51,26 +53,30 @@ class _HomePageState extends State<HomePage> {
               width: 351,
               color: Colors.blueGrey,
             ),
+            SizedBox(height: 30),
             Expanded(
-              child: GridView.builder(
-                itemCount: 20,
-                gridDelegate:
-                    SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      
-                    ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
 
-                itemBuilder: (context, index) {
-                  return Container(
-                    margin: EdgeInsets.all(5),
-                    height: 250,
-                    width: 169,
-                    color: Colors.grey,
-                    child: Text("product ${index + 1} "),
-                  );
-                },
+
+                
+                child: GridView.builder(
+                  itemCount: 20,
+                  gridDelegate:
+                      SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        mainAxisExtent: 250,
+                      ),
+                
+                  itemBuilder: (context, index) {
+                    return ProductCard();
+                  },
+                ),
               ),
             ),
+          
           ],
         ),
       ),
