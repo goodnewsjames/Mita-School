@@ -10,6 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +73,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                 
                   itemBuilder: (context, index) {
-                    return ProductCard();
+                    return ProductCard( onPressed: () {
+                      setState(() {
+                        
+                      });
+                    },);
                   },
                 ),
               ),
@@ -88,54 +94,3 @@ class _HomePageState extends State<HomePage> {
 
 
 
-// GridView(
-//                 gridDelegate:
-//                     SliverGridDelegateWithFixedCrossAxisCount(
-//                       crossAxisCount: 2,
-//                     ),
-               
-        
-//                 children: [
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-//                     height: 400,
-//                     width: 400,
-//                     color: Color(0XFFF1F1F1),
-//                   ),
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-        
-//                     height: 400,
-//                     width: 400,
-//                       color: Color(0XFFF1F1F1),
-//                   ),
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-        
-//                     height: 400,
-//                     width: 400,
-//                        color: Color(0XFFF1F1F1),
-//                   ),
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-        
-//                     height: 400,
-//                     width: 400,
-//                        color: Color(0XFFF1F1F1),
-//                   ),
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-        
-//                     height: 400,
-//                     width: 400,
-//                       color: Color(0XFFF1F1F1),
-//                   ),
-//                   Container(
-//                     margin: EdgeInsets.all(5),
-        
-//                     height: 400,
-//                     width: 400,
-//                       color: Color(0XFFF1F1F1),
-//                   ),
-//                 ],
-//               ),
