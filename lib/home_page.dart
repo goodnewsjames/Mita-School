@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
+  bool isButtonPressed = false;
   
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,10 @@ class _HomePageState extends State<HomePage> {
                       setState(() {
                         
                       });
-                    },);
+                    },
+
+                     isFavourite: isButtonPressed,
+                    );
                   },
                 ),
               ),
