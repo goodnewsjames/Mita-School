@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard({
-    super.key,
-    required this.onPressed,
-    this.isFavourite = false,
-  });
-  final bool isFavourite;
-  final Function() onPressed;
+class ProductCard extends StatefulWidget {
+  const ProductCard({super.key});
 
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  bool isFavourite = false;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -19,7 +19,6 @@ class ProductCard extends StatelessWidget {
             horizontal: 16,
           ),
           height: 250,
-          width: 169,
           color: Color(0XFFF1F1F1),
           child: Column(
             children: [
@@ -50,7 +49,11 @@ class ProductCard extends StatelessWidget {
                   ? Colors.red
                   : Colors.black,
             ),
-            onPressed: onPressed,
+            onPressed: () {
+              setState(() {
+                isFavourite = !isFavourite;
+              });
+            },
           ),
         ),
       ],

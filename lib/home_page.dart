@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isButtonPressed = false;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,10 +58,10 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 30),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 8.0,
+                ),
 
-
-                
                 child: GridView.builder(
                   itemCount: 20,
                   gridDelegate:
@@ -71,29 +71,16 @@ class _HomePageState extends State<HomePage> {
                         mainAxisSpacing: 10,
                         mainAxisExtent: 250,
                       ),
-                
-                  itemBuilder: (context, index) {
-                    return ProductCard( onPressed: () {
-                      setState(() {
-                        
-                      });
-                    },
 
-                     isFavourite: isButtonPressed,
-                    );
+                  itemBuilder: (context, index) {
+                    return ProductCard();
                   },
                 ),
               ),
             ),
-          
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
