@@ -50,10 +50,23 @@ class _HomePageState extends State<HomePage> {
         ),
         child: Column(
           children: [
-            Container(
-              height: 195,
-              width: 351,
-              color: Colors.blueGrey,
+            SizedBox(
+              height: 205,
+              child: CarouselView(
+                itemExtent: 351,
+                reverse: false,shape: BeveledRectangleBorder(),
+                children: [
+                  Container(color: Colors.lightBlue),
+                  Container(color: Colors.black),
+                  Container(color: Colors.green),
+                  Container(color: Colors.pink),
+                  Container(color: Colors.orange),
+                  Container(color: Colors.black),
+                  Container(color: Colors.green),
+                  Container(color: Colors.pink),
+                  Container(color: Colors.orange),
+                ],
+              ),
             ),
             SizedBox(height: 30),
             Expanded(
